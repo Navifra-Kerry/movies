@@ -1,0 +1,13 @@
+.upload-main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  .form {
+    width: 80%;
+    height: 100%;
+    background-color: #141a22;
+    padding: 40px;
+    color: white;
+  }
+}

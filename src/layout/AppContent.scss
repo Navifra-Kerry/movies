@@ -1,5 +1,7 @@
-@import '../sass/theme.scss';
-.container {
+.content {
+  position: relative;
   width: 100%;
   background-color: #1c222b;
+  margin: 0;
+  padding: 0;
 }

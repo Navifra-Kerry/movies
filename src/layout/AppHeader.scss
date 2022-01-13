@@ -1,10 +1,8 @@
-@import '../sass/theme.scss';
-
 .appHeader {
   display: flex;
   width: 100vw;
   height: 7vh;
-  background: $darker;
+  background: #161b22;
   &-controls {
     display: flex;
     flex-direction: row;
@@ -13,16 +11,17 @@
     li {
       display: flex;
       margin: 0;
-      padding: 10px;
+      padding: 5px;
     }
 
     li {
       list-style-type: none;
       color: #fff;
-      svg {
+      span {
         display: inline-block;
         padding: 0 10px;
         max-height: 40px;
+        font-size: 25px;
 
         &.active,
         &:hover {

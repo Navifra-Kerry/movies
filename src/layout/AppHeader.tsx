@@ -1,8 +1,6 @@
 import React from 'react';
 import './AppHeader.scss';
 import ConditionalNavLink from '../components/conditionalNavLink/conditionalNavLink';
-import { faUpload, faHome } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const AppHeader = () => {
   return (
@@ -11,7 +9,7 @@ const AppHeader = () => {
         <ul>
           <li className="movies">
             <ConditionalNavLink title="movies" to="/movie" disabled={false}>
-              <FontAwesomeIcon icon={faHome} size="lg" />
+              <i className="bi bi-film" role="img" aria-label="movies"></i>
             </ConditionalNavLink>
           </li>
           <li className="upload">
@@ -20,7 +18,11 @@ const AppHeader = () => {
               to="/movie/upload"
               disabled={false}
             >
-              <FontAwesomeIcon icon={faUpload} size="lg" />
+              <i
+                className="bi bi-cloud-arrow-up"
+                role="img"
+                aria-label="upload"
+              ></i>
             </ConditionalNavLink>
           </li>
         </ul>

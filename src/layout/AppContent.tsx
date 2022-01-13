@@ -9,7 +9,7 @@ const Loading = () => {
 
 const AppContent = () => {
   return (
-    <div className="container">
+    <div className="content">
       <Suspense fallback={<Loading />}>
         <Switch>
           {routes.map((route: IRouter, idx) => {

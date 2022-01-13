@@ -1,11 +1,18 @@
 import React from 'react';
 import './Movies.scss';
+import { useHistory } from 'react-router-dom';
 
 function Movies() {
+  const history = useHistory();
   return (
     <div className="movive-main">
       <section className="cards">
-        <div className="card">
+        <div
+          className="card"
+          onClick={() => {
+            history.push(`/movie/${1}`);
+          }}
+        >
           <div className="card-image-container">
             <img
               src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
