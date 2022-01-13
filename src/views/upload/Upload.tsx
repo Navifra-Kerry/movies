@@ -1,12 +1,30 @@
 import React, { useState } from 'react';
+import FileUploader from './fileupload';
+import { useHistory } from 'react-router-dom';
+import * as apiCaller from '../../utils/apicaller';
 import './Upload.scss';
 
 function Upload() {
   const [title, setTile] = useState('');
   const [descrition, setDescrition] = useState('');
+  const [selectedFile, setSelectedFile] = useState('');
 
-  const onSubmit = () => {
-    console.log(title + descrition);
+  const history = useHistory();
+
+  const onSubmit = async (e: any) => {
+    try {
+      const formData = new FormData();
+      formData.append('file', selectedFile);
+
+      const movie = await apiCaller.CreateMovie(
+        { title: title, content: descrition, imagepath: '' },
+        formData,
+      );
+
+      history.push(`/movie`);
+    } catch (ex) {
+      alert(ex);
+    }
   };
 
   return (
@@ -36,12 +54,12 @@ function Upload() {
             onChange={(e) => setDescrition(e.target.value)}
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="thumbnailFile">Thumbnail image</label>
-          <input type="file" className="form-control-file" id="sup" />
-        </div>
-        <button type="submit" className="btn btn-primary" onClick={onSubmit}>
-          Submit
+        <FileUploader
+          onFileSelectSuccess={(file: any) => setSelectedFile(file)}
+          onFileSelectError={(error: string) => alert(error)}
+        />
+        <button onClick={onSubmit} className="btn btn-primary">
+          Summit
         </button>
       </form>
     </div>
