@@ -1,5 +1,8 @@
 export interface IMovie {
-  title: string;
-  content: string;
-  imagepath: string;
+  id?: number;
+  title?: string;
+  content?: string;
+  imagepath?: string;
+  status?: true;
+  createdAt?: Date;
 }

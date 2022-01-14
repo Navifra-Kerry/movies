@@ -24,7 +24,7 @@ const AppContent = () => {
               )
             );
           })}
-          <Redirect from="/" to="/dashboard" />
+          <Redirect from="/" to="/movie" />
         </Switch>
       </Suspense>
     </div>

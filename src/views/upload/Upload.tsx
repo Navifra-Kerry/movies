@@ -13,6 +13,7 @@ function Upload() {
 
   const onSubmit = async (e: any) => {
     try {
+      e.preventDefault();
       const formData = new FormData();
       formData.append('file', selectedFile);
 
@@ -21,7 +22,7 @@ function Upload() {
         formData,
       );
 
-      history.push(`/movie`);
+      history.push(`/movie/${movie.data.id}`);
     } catch (ex) {
       alert(ex);
     }

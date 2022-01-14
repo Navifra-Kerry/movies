@@ -9,7 +9,13 @@ export async function GetMovies() {
     },
   });
 
-  return response;
+  return response.data;
+}
+
+export async function GetMovie(id: number) {
+  const response = await axios.get(`/api/movie/${id}`);
+
+  return response.data;
 }
 
 export async function CreateMovie(movie: IMovie, form: FormData) {
@@ -23,7 +29,7 @@ export async function CreateMovie(movie: IMovie, form: FormData) {
         'Content-Type': 'application/json',
       },
     });
-    return response;
+    return response.data;
   } catch (ex) {
     throw ex;
   }

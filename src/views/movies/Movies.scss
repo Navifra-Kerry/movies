@@ -1,4 +1,4 @@
-.movive-main {
+.movives-main {
   display: grid;
   grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
   grid-gap: 40px;
@@ -71,7 +71,7 @@
 }
 
 @media only screen and (max-width: 1000px) {
-  .movive-main {
+  .movives-main {
     .card {
       grid-column-end: span 6;
     }
@@ -79,7 +79,7 @@
 }
 
 @media only screen and (max-width: 700px) {
-  .movive-main {
+  .movives-main {
     grid-gap: 20px;
     .card {
       grid-column-end: span 12;
@@ -88,7 +88,7 @@
 }
 
 @media only screen and (max-width: 500px) {
-  .movive-main {
+  .movives-main {
     grid-template-columns: 10px repeat(6, 1fr) 10px;
     grid-gap: 10px;
     .cards {
