@@ -29,10 +29,7 @@ function Movies() {
               }}
             >
               <div className="card-image-container">
-                <img
-                  src={`/api/uploads/${m.imagepath}`}
-                  alt="Detailed image description would go here."
-                />
+                <img src={`/api/uploads/${m.imagepath}`} alt="image" />
               </div>
               <div className="card-content">
                 <p className="card-title text-medium">{m.title}</p>
