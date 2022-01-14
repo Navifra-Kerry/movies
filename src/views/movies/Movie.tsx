@@ -21,7 +21,7 @@ function Movie(props: any) {
   return (
     <div className="movive-main">
       <section className="container d-flex justify-content-center align-items-center">
-        <div className="container d-flex w-50 m-10 ">
+        <div className="image-container">
           <img
             src={`/api/uploads/${movieInfo.imagepath}`}
             alt="Detailed image description would go here."
