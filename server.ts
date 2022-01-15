@@ -82,6 +82,10 @@ function bootstrap() {
   app.use(express.static('./build'));
   app.use('/api', createProxyMiddleware(options));
 
+  app.use(function (req, res) {
+    res.status(404).redirect('/');
+  });
+
   const onHealthCheck = async () => {
     // return axios.get(`${apiServerUrl}/health`).then(res=> return res);
   };
